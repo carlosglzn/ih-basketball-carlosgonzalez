@@ -10,6 +10,7 @@ const hbs           = require("hbs");
  * 2. MIDDLEWARE
  */
 
+require('dotenv').confic();
 app.use(express.static('public'));
 app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials")
@@ -116,6 +117,6 @@ app.get("/teams", (req, res) => {
  * 4. SERVIDOR
  */
 
-app.listen(3004, () => {
+app.listen(process.env.PORT || 3004, () => {
     console.log("Estoy en el puerto 3004");
 })
