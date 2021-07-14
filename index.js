@@ -10,7 +10,7 @@ const hbs           = require("hbs");
  * 2. MIDDLEWARE
  */
 
-require('dotenv').confic();
+require('dotenv').config();
 app.use(express.static('public'));
 app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials")
